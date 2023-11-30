@@ -31,6 +31,9 @@ Route::get('/about/{search}', function () {
     return view('about', $data);
 });
 
+
+Route::resource('/profil', App\Http\Controllers\ProfilController::class);
+
 // Route::get('/user', [UserController::class, 'index'])->name('user.index');
 // Route::get('/user/tambah_user', [UserController::class, 'tambah'])->name('user.tambah');
 // Route::post('/user/simpan_user', [UserController::class, 'simpan'])->name('user.simpan');
@@ -45,5 +48,3 @@ Route::get('/about/{search}', function () {
 // Route::post('/produk/update_produk/{id}', [ProdukController::class, 'update'])->name('produk.update');
 // Route::delete('/produk/delete_produk/{id}', [ProdukController::class, 'delete'])->name('produk.delete');
 
-Route::resource('user', UserController::class);
-Route::resource('produk', ProdukController::class);

@@ -35,4 +35,9 @@ class UserController extends Controller
         // Logika untuk memperbarui user
         // $id adalah ID user yang ingin diperbarui
     }
+
+    public function delete($id){
+        // Logika untuk menghapus user
+        // $id adalah ID user yang ingin dihapus
+    }
 }
