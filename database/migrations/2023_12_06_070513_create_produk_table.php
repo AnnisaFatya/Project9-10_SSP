@@ -14,6 +14,7 @@ return new class extends Migration
         Schema::create('produk', function (Blueprint $table) {
             $table->id();
             $table->string('produk');
+            $table->boolean('Admin');
             $table->float('price',20,2);
             $table->integer('stock');
             $table->timestamps();
