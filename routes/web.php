@@ -50,21 +50,22 @@ Route::get('/about/{search}', function () {
 // Route::post('/produk/update_produk/{id}', [ProdukController::class, 'update'])->name('produk.update');
 
 // Route:: get('/profile', function() {
-//     $nama ="Resa Meylani";
+//     $nama ="Annisa";
 //     return view ('profile', compact('nama'));
 // });
+
+
 Route::resource('user', UserController::class);
 Route::resource('profil', ProfilController::class);
-
-Route::middleware(['auth', 'user'])->group(function() {
-    Route::resource('produk', ProdukController::class);
-});
-
-Route::middleware(['auth', 'admin'])->group(function () {
-    Route::get('admin', function () {
-        return 'admin page';
-    });
-});
-
-
+Route::resource('produk', ProdukController::class);
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+// Route::middleware(['auth', 'user'])->group(function() {
+// Route::resource('produk', ProdukController::class); }); 
+
+// Route::middleware(['auth', 'admin'])->group(function () {
+   // Route::get('admin', function () {
+     //   return 'admin page';
+    // });
+// });
+
