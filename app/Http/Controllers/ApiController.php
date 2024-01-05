@@ -53,4 +53,14 @@ class ApiController extends Controller
         return response()->json($response);
     }
 
+    public function create_product(){
+        $formData = [
+            'produk'       => null,
+            'price'         => null,
+            'stock'         => null,
+        ];
+
+        return response()->json($formData);
+    }
+
 }

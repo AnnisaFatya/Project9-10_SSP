@@ -20,6 +20,10 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('/product_vue', function () {
+    return view('product_page');
+});
+
 Auth::routes();
 
 Route::get('/about', function () {
